@@ -10,11 +10,15 @@ export default function App() {
   const [isOpen,setIsOpen] = useState(true)
   function handleNextEvent() {
     if (step >= messages.length - 1) return;
-    setStep(step + 1);
+    
+    setStep(s=>s+1);
+  
+    
   }
   function handleprevEvent() {
     if (step <= 0) return;
-    setStep(step - 1);
+    setStep(s=>s-1);
+  
   }
   function openClose(){
     if(isOpen)setIsOpen(false)
